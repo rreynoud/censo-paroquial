@@ -22,6 +22,10 @@ var CadastroComponent = (function () {
         this.familia.enderecoRua = '';
         this.familia.enderecoTipo = '';
         this.familia.sobrenome = '';
+        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
+        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
+        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
+        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
     }
     CadastroComponent.prototype.cadastrar = function (event) {
         event.preventDefault();
@@ -30,6 +34,10 @@ var CadastroComponent = (function () {
         headers.append('Content-Type', 'application/json');
         this.familia = new familia_component_1.FamiliaComponent();
         this.pessoas = [];
+        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
+        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
+        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
+        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
         // this.http.post('v1/fotos', JSON.stringify(this.familia), { headers: headers })
         // .subscribe(() => {
         //     this.familia = new FamiliaComponent()

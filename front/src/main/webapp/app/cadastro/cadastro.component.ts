@@ -28,7 +28,6 @@ export class CadastroComponent {
         console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
         console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
         console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
-
         console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
 
     }
@@ -42,6 +41,12 @@ export class CadastroComponent {
 
         this.familia = new FamiliaComponent();
         this.pessoas = []  ;
+
+        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
+        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
+        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
+        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
+
 
         // this.http.post('v1/fotos', JSON.stringify(this.familia), { headers: headers })
         // .subscribe(() => {
