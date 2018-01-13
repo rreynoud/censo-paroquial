@@ -21,28 +21,26 @@ var CadastroComponent = (function () {
         this.familia.enderecoNumero = '';
         this.familia.enderecoRua = '';
         this.familia.enderecoTipo = '';
-        this.familia.sobrenome = '';
-        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
-        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
-        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
-        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
+        this.familia.sobreNome = '';
+        console.log('listando familias');
+        http.get('censo-0.0.1-SNAPSHOT/family')
+            .map(function (res) { return res.json(); }).subscribe(function (fotos) { return console.log(JSON.stringify(fotos)); }, function (erro) { return console.log(erro); });
     }
     CadastroComponent.prototype.cadastrar = function (event) {
+        var _this = this;
         event.preventDefault();
+        console.log('familia a ser salva');
         console.log(this.familia);
+        console.log(JSON.stringify(this.familia));
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
-        this.familia = new familia_component_1.FamiliaComponent();
-        this.pessoas = [];
-        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
-        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
-        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
-        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
-        // this.http.post('v1/fotos', JSON.stringify(this.familia), { headers: headers })
-        // .subscribe(() => {
-        //     this.familia = new FamiliaComponent()
-        //     console.log('Familia salva com sucesso');
-        // }, erro =>  console.log(erro));
+        this.http.post('censo-0.0.1-SNAPSHOT/family', JSON.stringify(this.familia), { headers: headers })
+            .subscribe(function () {
+            _this.familia = new familia_component_1.FamiliaComponent();
+            console.log('Familia salva com sucesso');
+            _this.familia = new familia_component_1.FamiliaComponent();
+            _this.pessoas = [];
+        }, function (erro) { return console.log('Erro ao tentar salvar familia: ' + erro); });
     };
     CadastroComponent.prototype.adicionarIntegrante = function (event) {
         event.preventDefault();

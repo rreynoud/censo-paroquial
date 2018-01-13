@@ -23,36 +23,34 @@ export class CadastroComponent {
         this.familia.enderecoNumero = '';
         this.familia.enderecoRua = '';
         this.familia.enderecoTipo = '';
-        this.familia.sobrenome = '';          
-        
-        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
-        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
-        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
-        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
+        this.familia.sobreNome = '';          
+
+        console.log('listando familias')
+        http.get('censo-0.0.1-SNAPSHOT/family')
+        .map(res => res.json()).subscribe(
+            fotos => console.log(JSON.stringify(fotos))       
+            ,erro => console.log(erro)
+        );
 
     }
 
     cadastrar(event) {    
         event.preventDefault();
+        console.log('familia a ser salva');
         console.log(this.familia);
+        console.log(JSON.stringify(this.familia));
 
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
-        this.familia = new FamiliaComponent();
-        this.pessoas = []  ;
-
-        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
-        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
-        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
-        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
-
-
-        // this.http.post('v1/fotos', JSON.stringify(this.familia), { headers: headers })
-        // .subscribe(() => {
-        //     this.familia = new FamiliaComponent()
-        //     console.log('Familia salva com sucesso');
-        // }, erro =>  console.log(erro));
+        this.http.post('censo-0.0.1-SNAPSHOT/family', JSON.stringify(this.familia), { headers: headers })
+        .subscribe(() => {
+            this.familia = new FamiliaComponent()
+            console.log('Familia salva com sucesso');
+            this.familia = new FamiliaComponent();
+            this.pessoas = []  ;
+                
+        }, erro =>  console.log( 'Erro ao tentar salvar familia: ' + erro));
         
     }    
 

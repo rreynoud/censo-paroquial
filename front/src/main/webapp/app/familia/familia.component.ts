@@ -9,7 +9,7 @@ import { PessoaComponent } from "../pessoa/pessoa.component";
 export class FamiliaComponent{
 
 
-    @Input() sobrenome: string = '';
+    @Input() sobreNome: string = '';
     @Input() enderecoRua: string = '';
     @Input() enderecoNumero: string = '';
     @Input() enderecoTipo: string = '';

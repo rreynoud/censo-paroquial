@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var FamiliaComponent = (function () {
     function FamiliaComponent() {
-        this.sobrenome = '';
+        this.sobreNome = '';
         this.enderecoRua = '';
         this.enderecoNumero = '';
         this.enderecoTipo = '';
@@ -20,7 +20,7 @@ var FamiliaComponent = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], FamiliaComponent.prototype, "sobrenome", void 0);
+    ], FamiliaComponent.prototype, "sobreNome", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
