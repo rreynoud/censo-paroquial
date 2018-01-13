@@ -23,7 +23,13 @@ export class CadastroComponent {
         this.familia.enderecoNumero = '';
         this.familia.enderecoRua = '';
         this.familia.enderecoTipo = '';
-        this.familia.sobrenome = '';            
+        this.familia.sobrenome = '';          
+        
+        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
+        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
+        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
+
+        console.log("asdfa.skdflaksjdflkasjdlkfjaslkdfjalksjdflkajsldfkjalskdjf");
 
     }
 

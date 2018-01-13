@@ -1,0 +1,69 @@
+<h1 class="text-center" >Cadastro de Famila</h1>
+
+<div class="container">
+
+    <form (submit)="cadastrar($event)" class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Sobrenome</label>
+                {{familia.sobrenome}}
+                <input  name="sobrenome" [(ngModel)]="familia.sobrenome" class="form-control"  autocomplete="off">    
+            </div>
+            <div class="form-group">
+                <label>enderecoRua</label>
+                <input name="enderecoRua"  [(ngModel)]="familia.enderecoRua" class="form-control"  autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label>enderecoNumero</label>
+                <textarea name="enderecoNumero" [(ngModel)]="familia.enderecoNumero" class="form-control"  autocomplete="off">
+                </textarea>
+            </div>
+
+            <h1>Integrantes:</h1>
+
+            <div *ngFor="let p of familia.integrantes"  class="col-md-12">
+                <div class="col-md-6">
+                    <label>nome</label>
+                    <p>{{p.nome}}</p>                    
+                </div>
+
+                <div class="col-md-6">
+                    <label>dataNascimento</label>
+                    <p>{{p.dataNascimento}}</p>                    
+                </div>                
+            </div>
+            
+
+            <button type="submit" class="btn btn-primary">
+                Salvar
+            </button>
+            <a [routerLink]="['']" class="btn btn-primary">Voltar</a>
+            <hr>
+
+        </div>
+
+        <form (submit)="adicionarIntegrante($event)" class="row">
+            <div class="col-md-6">
+
+                <h1>Adicionar integrante:</h1>
+            
+                <div class="col-md-6"  >
+                    <div class="form-group">
+                        <label>nome</label>
+                        <input  name="nome" [(ngModel)]="integrante.nome" class="form-control"  autocomplete="off">    
+                    </div>
+                    <div class="form-group">
+                        <label>dataNascimento</label>
+                        <input name="dataNascimento"  [(ngModel)]="integrante.dataNascimento" class="form-control"  autocomplete="off">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Adicionar
+                    </button>                
+
+                </div>
+            </div>
+        </form>
+     
+    </form>
+</div>
