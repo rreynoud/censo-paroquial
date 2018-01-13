@@ -60,10 +60,10 @@ export class CadastroComponent {
         
         var integranteAUX:PessoaComponent = new PessoaComponent();
         integranteAUX.dataNascimento = this.integrante.dataNascimento;
-        integranteAUX.nome = this.integrante.nome;
+        integranteAUX.name = this.integrante.name;
 
         this.pessoas.push(integranteAUX);
-        this.familia.integrantes.push(integranteAUX);
+        this.familia.persons.push(integranteAUX);
         
         this.integrante = new PessoaComponent();
 

@@ -6,7 +6,7 @@ import { Component, Input } from "@angular/core";
     templateUrl: './pessoa.component.html'
 })
 export class PessoaComponent{
-    @Input() nome: string;
+    @Input() name: string;
     @Input() genero: string;
     @Input() dataNascimento: string;
 }

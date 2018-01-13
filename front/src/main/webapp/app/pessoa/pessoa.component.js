@@ -15,7 +15,7 @@ var PessoaComponent = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], PessoaComponent.prototype, "nome", void 0);
+    ], PessoaComponent.prototype, "name", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)

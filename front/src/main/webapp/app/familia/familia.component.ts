@@ -13,7 +13,7 @@ export class FamiliaComponent{
     @Input() enderecoRua: string = '';
     @Input() enderecoNumero: string = '';
     @Input() enderecoTipo: string = '';
-    @Input() integrantes: PessoaComponent[] = [] ;
+    @Input() persons: PessoaComponent[] = [] ;
     
     
 }

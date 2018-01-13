@@ -15,7 +15,7 @@ var FamiliaComponent = (function () {
         this.enderecoRua = '';
         this.enderecoNumero = '';
         this.enderecoTipo = '';
-        this.integrantes = [];
+        this.persons = [];
     }
     __decorate([
         core_1.Input(), 
@@ -36,7 +36,7 @@ var FamiliaComponent = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Array)
-    ], FamiliaComponent.prototype, "integrantes", void 0);
+    ], FamiliaComponent.prototype, "persons", void 0);
     FamiliaComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
