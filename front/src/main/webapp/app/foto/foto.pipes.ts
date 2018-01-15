@@ -10,7 +10,8 @@ export class FiltroPorTitulo implements PipeTransform {
         console.log(fotos); 
         console.log(digitado);    
         digitado = digitado.toLowerCase();
-        return fotos.filter(foto => foto.titulo.toLowerCase().includes(digitado));     
+        return fotos;
+        //return fotos.filter(foto => foto.titulo.toLowerCase().includes(digitado));     
     }
 
 }

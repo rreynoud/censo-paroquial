@@ -8,17 +8,18 @@ import { Http } from "@angular/http";
 })
 export class ListagemComponent{
 
-    fotos: Object[] = [];
+    familias: Object[] = [];
     
     constructor(http: Http) {
-        console.log('listando fotos')
-        http.get('v1/fotos')
-        .map(res => res.json()).subscribe(
-            fotos => this.fotos = fotos
-            
+        console.log('listando familias')
+
+        http.get('censo-0.0.1-SNAPSHOT/family')
+        .map(res => res.json())
+        .subscribe(familias => 
+            this.familias = familias 
             ,erro => console.log(erro)
         );
 
-        console.log(this.fotos);
+        console.log(this.familias);
     }        
 }

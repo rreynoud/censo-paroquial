@@ -1,5 +1,5 @@
 <div class="jumbotron" >
-        <h1 class="text-center" >  Censo</h1>
+        <h1 class="text-center" >Censo</h1>
     </div>
     <div class="container" >
     
@@ -9,10 +9,10 @@
                     <div class="input-group">
                         <span class="input-group-btn">
                                 <a [routerLink]="['/cadastro']" class="btn btn-primary">
-                                    Nova foto
+                                    Nova Familia
                                 </a>
                         </span>
-                        <input #textoProcurado (keyup)="0" class="form-control"  placeholder="filtrar pelo título da foto">                        
+                        <input class="form-control"  placeholder="filtrar pelo sobrenome da familia">                        
                     </div> 
                 </form>
             </div> <!-- fim col-md-12 -->
@@ -20,8 +20,8 @@
         <br>
 
         <div class="row" >
-            <painel *ngFor="let foto of fotos | filtroPorTitulo:textoProcurado.value" titulo="{{foto.titulo | uppercase }}" class="col-md-2" >
-                <foto url="{{foto.url}}" titulo="{{foto.titulo}}" ></foto>   
+            <painel *ngFor="let familia of familias " class="col-md-2" >
+                <h1>{{familia.sobreNome}}</h1>
             </painel>            
         </div>
     

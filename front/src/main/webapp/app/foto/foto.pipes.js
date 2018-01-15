@@ -16,7 +16,8 @@ var FiltroPorTitulo = (function () {
         console.log(fotos);
         console.log(digitado);
         digitado = digitado.toLowerCase();
-        return fotos.filter(function (foto) { return foto.titulo.toLowerCase().includes(digitado); });
+        return fotos;
+        //return fotos.filter(foto => foto.titulo.toLowerCase().includes(digitado));     
     };
     FiltroPorTitulo = __decorate([
         core_1.Pipe({

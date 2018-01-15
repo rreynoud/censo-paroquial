@@ -13,11 +13,14 @@ var http_1 = require("@angular/http");
 var ListagemComponent = (function () {
     function ListagemComponent(http) {
         var _this = this;
-        this.fotos = [];
-        console.log('listando fotos');
-        http.get('v1/fotos')
-            .map(function (res) { return res.json(); }).subscribe(function (fotos) { return _this.fotos = fotos; }, function (erro) { return console.log(erro); });
-        console.log(this.fotos);
+        this.familias = [];
+        console.log('listando familias');
+        http.get('censo-0.0.1-SNAPSHOT/family')
+            .map(function (res) { return res.json(); })
+            .subscribe(function (familias) {
+            return _this.familias = familias;
+        }, function (erro) { return console.log(erro); });
+        console.log(this.familias);
     }
     ListagemComponent = __decorate([
         core_1.Component({
