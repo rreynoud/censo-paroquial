@@ -13,13 +13,13 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import br.com.censo.model.Family;
-import br.com.censo.model.Person;
+import br.com.censo.model.Familia;
+import br.com.censo.model.Pessoa;
 import br.com.censo.model.service.FamilyService;
 
 @Path("/family")
 @Stateless
-public class FamilyResource extends AbstractResource<Integer, Family> {
+public class FamilyResource extends AbstractResource<Integer, Familia> {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -31,11 +31,11 @@ public class FamilyResource extends AbstractResource<Integer, Family> {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<Family> findAll() {
+	public List<Familia> findAll() {
 
 		try {
 
-			List<Family> result = familyService.findAll();
+			List<Familia> result = familyService.findAll();
 
 			return result;
 
@@ -48,14 +48,14 @@ public class FamilyResource extends AbstractResource<Integer, Family> {
 	@POST
 	@Consumes({ MediaType.APPLICATION_JSON })
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response save(Family family) {
+	public Response save(Familia family) {
 		try {
 			
 			if(family != null ) {
 				
-				if(family.getPersons() != null) {
-					for(Person p : family.getPersons()) {
-						p.setFamily(family);						
+				if(family.getIntegrantes() != null) {
+					for(Pessoa integrante : family.getIntegrantes()) {
+						integrante.setFamilia(family);						
 					}
 				}
 				

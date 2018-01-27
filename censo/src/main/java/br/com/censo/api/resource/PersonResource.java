@@ -13,12 +13,12 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import br.com.censo.model.Person;
+import br.com.censo.model.Pessoa;
 import br.com.censo.model.service.PersonService;
 
 @Path("/person")
 @Stateless
-public class PersonResource extends AbstractResource<Integer, Person>{
+public class PersonResource extends AbstractResource<Integer, Pessoa>{
 
 	@Inject
 	private PersonService personService;
@@ -29,7 +29,7 @@ public class PersonResource extends AbstractResource<Integer, Person>{
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<Person> findAll() {
+	public List<Pessoa> findAll() {
 		
 		if(personService != null) {
 			System.out.println("eu bão");
@@ -39,7 +39,7 @@ public class PersonResource extends AbstractResource<Integer, Person>{
 		
 		try {
 			
-			List<Person> result = personService.findAll();
+			List<Pessoa> result = personService.findAll();
 
 			return result;
 
@@ -53,7 +53,7 @@ public class PersonResource extends AbstractResource<Integer, Person>{
   @POST
   @Consumes({MediaType.APPLICATION_JSON})
   @Produces(MediaType.APPLICATION_JSON)
-  public Response save(Person entity) {
+  public Response save(Pessoa entity) {
       try {
           this.personService.save(entity);
           return Response.status(200).entity(entity).build();
